@@ -6,8 +6,17 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="loader.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <div id="spinner-wrapper" class="spinner-wrapper">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
     <header>
         <a href="#" class="logo">Portfolio</a>
         <div class="toggle" onclick="toggleMenu();"></div>
@@ -178,15 +187,20 @@
             </div>
             <div class="formBx">
                 <form>
-                    <h3>Message Me</h3>
-                    <input type="text" name="" placeholder="Full Name">
-                    <input type="email" name="" placeholder="Email">
-                    <textarea placeholder="Your Message"></textarea>
-                    <input type="submit" value="Send">
+                    <a class="message" href="mailto:kishansomaiya271@gmail.com"><h3>Message Me</h3></a>
+                    
                 </form>
             </div>
         </div>
     </section>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function() {
+            $(".spinner-wrapper").fadeToggle();
+        }, 1500);
+    </script>
     <script type="text/javascript">
         window.addEventListener('scroll', function(){
             var header = document.querySelector('header');
@@ -199,6 +213,10 @@
             menuToggle.classList.toggle('active');
             menu.classList.toggle('active');
         }
+
+        
+
+        
     </script>
 </body>
 </html>
